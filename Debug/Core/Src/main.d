@@ -52,7 +52,13 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
- ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ C:/Users/Yven/Documents/GitHub/STM32F429I-ADC-UART/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h \
+ C:/Users/Yven/Documents/GitHub/STM32F429I-ADC-UART/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.h \
+ C:/Users/Yven/Documents/GitHub/STM32F429I-ADC-UART/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.h \
+ c:\users\yven\documents\github\stm32f429i-adc-uart\utilities\fonts\fonts.h \
+ c:\users\yven\documents\github\stm32f429i-adc-uart\drivers\bsp\components\ili9341\ili9341.h \
+ c:\users\yven\documents\github\stm32f429i-adc-uart\drivers\bsp\components\common\lcd.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -108,3 +114,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+C:/Users/Yven/Documents/GitHub/STM32F429I-ADC-UART/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_lcd.h:
+C:/Users/Yven/Documents/GitHub/STM32F429I-ADC-UART/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.h:
+C:/Users/Yven/Documents/GitHub/STM32F429I-ADC-UART/Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.h:
+c:\users\yven\documents\github\stm32f429i-adc-uart\utilities\fonts\fonts.h:
+c:\users\yven\documents\github\stm32f429i-adc-uart\drivers\bsp\components\ili9341\ili9341.h:
+c:\users\yven\documents\github\stm32f429i-adc-uart\drivers\bsp\components\common\lcd.h:

@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stm32f429i_discovery_lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -80,7 +80,7 @@ void DisplayTask(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+static void DisplayInit(void);
 /* USER CODE END 0 */
 
 /**
@@ -120,6 +120,7 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  DisplayInit();
 
   /* USER CODE END 2 */
 
@@ -645,7 +646,26 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+static void DisplayInit(void)
+{
+	BSP_LCD_Init();
 
+	//Start Screen
+	BSP_LCD_LayerDefaultInit(LCD_BACKGROUND_LAYER,LCD_FRAME_BUFFER);
+	BSP_LCD_LayerDefaultInit(LCD_FOREGROUND_LAYER,LCD_FRAME_BUFFER);
+	BSP_LCD_SelectLayer(LCD_FOREGROUND_LAYER);
+	BSP_LCD_DisplayOn();
+
+	BSP_LCD_Clear(LCD_COLOR_ORANGE);
+	BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+	BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
+	BSP_LCD_FillRect(10, 10, 220, 80);
+	BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+	BSP_LCD_DrawRect(10, 10, 220, 80);
+
+	BSP_LCD_DisplayStringAt(0, 30, (uint8_t*)"Embedded", CENTER_MODE);
+	BSP_LCD_DisplayStringAt(0, 50, (uint8_t*)"KI", CENTER_MODE);
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_DisplayTask */
